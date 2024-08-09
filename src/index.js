@@ -24,10 +24,8 @@ const server = http.createServer((request, response) => {
             compiler(response, 200, 'text/plain', `Hello world`)
             break;
         default:
-            if (response.status === 500) {
-                compiler(response, 500, 'text/plain', `Server error - 500`)
-                break;
-            } else { break }
+            compiler(response, 500, 'text/plain', `Server error - 500`)
+            break;
     }
 });
 
