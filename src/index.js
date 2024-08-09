@@ -2,10 +2,10 @@ const http = require('http');
 const getUsers = require('./modules/file-reader.js')
 const compiler = require('./modules/compiler-answer.js')
 const config = require('./consig.js');
-const getErrorTime = require('./modules/error-time.js');
+const getConsoleTime = require('./modules/console-time.js');
 
 const server = http.createServer((request, response) => {
-    console.info('Новый запрос', getErrorTime())
+    console.info('Новый запрос', getConsoleTime())
 
     const url = new URL(request.url, `http://${config.hostname}`);
     const name = url.searchParams.get("hello");

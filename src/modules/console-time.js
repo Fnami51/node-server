@@ -1,4 +1,4 @@
-function getErrorTime() {
+function getConsoleTime() {
     const now = new Date();
     let hours = now.getHours();
     let minutes = now.getMinutes();
@@ -12,4 +12,4 @@ function getErrorTime() {
     return `[${hours}:${minutes}:${seconds}]`
 }
 
-module.exports = getErrorTime
+module.exports = getConsoleTime
