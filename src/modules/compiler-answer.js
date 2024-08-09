@@ -6,7 +6,9 @@ function getContentType (type) {
 
 function getStatusMessage(statusCode) {
     switch (statusCode) {
-        case 200: return "OK";
+        case 200: 
+            console.error('Запрос успешно обработан - ', getErrorTime(), ' => ', `Status code ${statusCode}`)
+            return "OK";
         case 400: 
             console.error('Error ', getErrorTime(), ' - ', `Status code ${statusCode}: Не передано имя в ссылке запороса`)
             return "Bad Request";
